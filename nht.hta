@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thái đẹp trai</title>
+    <hta:application id="app" border="none" caption="no" contextmenu="no" selection="no" sysmenu="no"/>
+    <script type="text/javascript">
+        window.onload = function() {
+            var count = 0;
+            var maxCount = 3;
+
+            // Hàm hiển thị văn bản "DEP TRAI KHONG CO GI SAI"
+            function displayText() {
+                if (count < maxCount) {
+                    var text = document.createElement("p");
+                    text.innerText = "THAI DEP TRAI LAN  " + (count + 1);
+                    document.body.appendChild(text);
+
+                    count++;
+
+                    // Gọi lại hàm sau 1 giây
+                    setTimeout(displayText, 1000);
+                }
+            }
+
+            displayText();
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
